@@ -5,7 +5,7 @@ servers with Drupal or regular web applications (php, python, static).
 
 ***This is a continuous work in progress***
 
-## Requirements from Ansible Galaxy
+## Requirements from Ansible Galaxy
 
 Install ansible-galaxy external roles
 
@@ -13,7 +13,6 @@ Install ansible-galaxy external roles
 
 ## Structure
 
-    .
     ├── README
     ├── ansible.cfg
     ├── galaxy.yml
@@ -44,7 +43,7 @@ Specify a custom host :
 
     ansible-playbook -l <myhost> playbooks/playbook.yml
 
-## Todo
+## Todo
 
 - Use Vault to store secret (MySQL root password, ...)
 - Manage MySQL db & user
