@@ -49,3 +49,9 @@ Specify a custom host :
 - Manage MySQL db & user
 - Manage vhosts file
 - Nginx role
+
+## Credits & special thanks
+
+- JocelynD for your [ansible roles](https://github.com/JocelynDelalande/ansible-roles) and personnal explanations.
+- [Jeff Geerling](https://github.com/geerlingguy) for all your generic roles !
+- Sanpi for your [ansible roles](https://gitlab.com/sanpi/ansible/)
