@@ -52,6 +52,6 @@ Specify a custom host :
 
 ## Credits & special thanks
 
-- JocelynD for your [ansible roles](https://github.com/JocelynDelalande/ansible-roles) and personnal explanations.
+- JocelynD for your [ansible roles](https://code.crapouillou.net/jocelyn/ansible-roles) and personnal explanations.
 - [Jeff Geerling](https://github.com/geerlingguy) for all your generic roles !
 - Sanpi for your [ansible roles](https://gitlab.com/sanpi/ansible/)
