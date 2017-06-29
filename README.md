@@ -55,3 +55,4 @@ Specify a custom host :
 - JocelynD for your [ansible roles](https://code.crapouillou.net/jocelyn/ansible-roles) and personnal explanations.
 - [Jeff Geerling](https://github.com/geerlingguy) for all your generic roles !
 - Sanpi for your [ansible roles](https://gitlab.com/sanpi/ansible/)
+- Aurelien Navarre for your [LXC / Ansible / Drupal presentation](http://www.drupalfacile.org/blog/2016/07/presentation-drupal-lyon-2016-environnements-dev-automatises-avec-lxc-ansible) [FR]
