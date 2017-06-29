@@ -1,0 +1,44 @@
+- name: Install Apache web server
+  apt: pkg="{{ item }}" update_cache=yes state=latest
+  with_items:
+    - apache2
+    - apache2-utils
+
+- name: Install Apache PHP 5
+  apt: pkg="{{ item }}"
+  with_items:
+    - libapache2-mod-php5
+  when: php_version == 5
+
+- name: Install Apache PHP 7
+  apt: pkg="{{ item }}"
+  with_items:
+    - libapache2-mod-php7.0
+  when: php_version == 7
+
+- name: Enable mod_rewrite
+  apache2_module:
+    name: rewrite
+    state: present
+  notify: Restart Apache
+
+- name: Enable mod_ssl
+  apache2_module:
+    name: ssl
+    state: present
+  notify: Restart Apache
+
+- name: Secure Apache2 configuration
+  lineinfile: dest=/etc/apache2/conf-enabled/security.conf regexp={{item.regex}} line={{item.replace_with}}
+  with_items:
+  - regex: ^ServerTokens OS
+    replace_with: ServerTokens Prod
+  - regex: ^ServerSignature On
+    replace_with: ServerSignature Off
+  notify: Restart Apache
+
+- name: Set default vhost (landing page)
+  template:
+    src: "default_index.html.j2"
+    dest: "/var/www/html/index.html"
+  notify: Restart Apache

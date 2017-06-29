@@ -1,0 +1,13 @@
+- hosts: mycustomhost
+  roles:
+    - debian_common
+    - php
+    - mysql
+    - apache
+    - drupal
+  vars:
+    - php_version: 7
+    - drupal_version: 8
+    - project_name: mycustomhost
+    - vhost: 
+      - domain: mycustomhost.dev

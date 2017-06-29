@@ -1,0 +1,10 @@
+# Ignore hosts, except example
+hosts/*
+!hosts/hosts_example
+
+# Ignore playbooks, except example
+playbooks/*
+!playbooks/playbook-example.yml
+
+# Ignore ansible-galaxy roles
+roles/?*.???*

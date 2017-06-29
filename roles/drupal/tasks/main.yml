@@ -1,0 +1,15 @@
+# Main Drupal tasks
+- name: Install Composer & Drush globally
+  include_role:
+    name: geerlingguy.composer
+
+- name: Install Drush globally
+  include_role:
+    name: geerlingguy.drush
+
+# Version specific tasks
+- include: drupal7.yml
+  when: drupal_version == 7
+
+- include: drupal8.yml
+  when: drupal_version == 8

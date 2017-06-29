@@ -1,0 +1,6 @@
+# Main PHP Tasks
+- include: php56.yml
+  when: php_version == 5
+
+- include: php7.yml
+  when: php_version == 7
