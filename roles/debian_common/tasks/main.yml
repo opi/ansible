@@ -1,14 +1,15 @@
 - name: Install base packages
-  apt: pkg="{{ item }}"
-  with_items:
-    - less
-    - nano
-    - curl
-    - wget
-    - rsync
-    - htop
-    - tree
-    - bash-completion
-    - haveged
-    - fail2ban
-    - git
+  apt:
+    pkg:
+        - less
+        - nano
+        - curl
+        - wget
+        - rsync
+        - htop
+        - tree
+        - bash-completion
+        - haveged
+        - fail2ban
+        - git
+    state: present

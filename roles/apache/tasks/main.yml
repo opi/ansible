@@ -1,19 +1,22 @@
 - name: Install Apache web server
-  apt: pkg="{{ item }}" update_cache=yes state=latest
-  with_items:
-    - apache2
-    - apache2-utils
+  apt:
+    pkg:
+      - apache2
+      - apache2-utils
+    state: present
 
 - name: Install Apache PHP 5
-  apt: pkg="{{ item }}"
-  with_items:
-    - libapache2-mod-php5
+  apt:
+    pkg:
+      - libapache2-mod-php5
+    state: present
   when: php_version == 5
 
 - name: Install Apache PHP 7
-  apt: pkg="{{ item }}"
-  with_items:
-    - libapache2-mod-php7.0
+  apt:
+    pkg:
+      - libapache2-mod-php
+    state: present
   when: php_version == 7
 
 - name: Enable mod_rewrite

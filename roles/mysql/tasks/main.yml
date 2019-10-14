@@ -1,20 +1,23 @@
 
 - name: Install MySQL
-  apt: pkg="{{ item }}"
-  with_items:
-    - mariadb-server
-    - mariadb-common
-    - mariadb-client
+  apt:
+    pkg:
+      - mariadb-server
+      - mariadb-common
+      - mariadb-client
+    state: present
 
 - name: Install MySQL PHP Lib
-  apt: pkg="{{ item }}"
-  with_items:
-    - php5-mysql
+  apt:
+    pkg:
+      - php5-mysql
+    state: present
   when: php_version == 5
 
 - name: Install MySQL PHP Lib
-  apt: pkg="{{ item }}"
-  with_items:
-    - php-mysql
+  apt:
+    pkg:
+      - php-mysql
+    state: present
   when: php_version == 7
 

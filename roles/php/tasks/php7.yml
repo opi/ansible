@@ -13,23 +13,27 @@
   when: ansible_distribution_release == "jessie"
 
 - name: Install PHP 7
-  apt: pkg="{{ item }}"
-  with_items:
-    - php
-    - php7.0
-    - php7.0-cli
-    - php7.0-fpm
-    - php7.0-mysql
-    - php7.0-curl
-    - php7.0-json
-    - php7.0-gd
-    - php7.0-mcrypt
-    - php7.0-memcached
-    - php7.0-readline
-    - php7.0-intl
-    - php7.0-sqlite3
-    - php7.0-gmp
-    - php7.0-geoip
-    - php7.0-mbstring
-    - php7.0-xml
-    - php7.0-zip
+  apt:
+    pkg:
+        - php
+        - php-cgi
+        - php-cli
+        - php-common
+        - php-curl
+        - php-fpm
+        - php-gd
+        - php-geoip
+        - php-gmp
+        - php-intl
+        - php-json
+        - php-mbstring
+        - php-memcached
+        - php-mysql
+        - php-opcache
+        - php-pear
+        - php-readline
+        - php-sqlite3
+        - php-tidy
+        - php-xml
+        - php-zip
+    state: present
