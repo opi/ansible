@@ -3,5 +3,5 @@
   when: php_version == 5
 
 - name: restart PHP fpm
-  service: name=php7.0-fpm state=restarted
+  service: name=php7*.service state=restarted
   when: php_version == 7
