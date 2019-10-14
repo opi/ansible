@@ -1,0 +1,5 @@
+- name: Install Drush Launcher
+  include_role:
+    name: geerlingguy.drush
+  vars:
+    drush_launcher_install: true

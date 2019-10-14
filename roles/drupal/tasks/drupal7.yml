@@ -1,0 +1,8 @@
+- name: Install Drush 8 globally
+  include_role:
+    name: geerlingguy.drush
+  vars:
+    drush_launcher_install: false
+    drush_composer_global_install: true
+    drush_composer_version: "~8.0"
+
