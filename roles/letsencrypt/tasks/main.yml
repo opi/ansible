@@ -1,0 +1,6 @@
+- name: Install Letsencrypt and Apache Certbot plugin
+  apt:
+    pkg:
+      - letsencrypt
+      - python3-certbot-apache
+    state: present
