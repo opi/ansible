@@ -12,4 +12,6 @@
         - haveged
         - fail2ban
         - git
+        - diffutils
+        - patch
     state: present
